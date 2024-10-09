@@ -1018,23 +1018,59 @@
       <tr>
         <td><span class="code">branches</span></td>
         <td>use cases
-          <br><br>
-          git branch new-design & git branch & git switch new-design
           <br> <br>
           git switch -c *branch-name* 
           <br> git checkout / switch master 
           <br> git merge new-design
-          <br> git branch -d new-design
+          <br> git branch -d new-design 
         </td>
 
-        <td> Branches allow you to work on different parts of a project without impacting the main branch (like fix errors, new design...). <br>
+        <td> Branches allow you to work on different parts of a project without impacting the main branch (like fix errors, new design...).
           <br><br>
-          <br>
-          git checkout -b new design
-          <br>
-          go to master, merge, delete
-          <br><br>
+          create branch and switch into it (old git checkout -b *name*)
+          <br>switch to master
+          <br> mere branch with master
+          <br>delete branch after merging
         </td>
+      </tr>
+      <tr>
+        <td><span class="code">pull request</span></td>
+        <td>git push origin update-readme
+          <br><br> compare changes, create pull request 
+          <br>merge pull request
+        </td>
+        <td>push locally created branch
+          <br><br> get someone to approve / propose changes
+          <br>merge branch into master & delete branch 
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">Branch github</span></td>
+        <td>
+          on github: 
+          <br>create branch
+          <br>git pull
+          <br>git status
+          <br> git branch
+          <br> git branch -a
+          <br>git checkout *new branch*
+          <br>git pull 
+          <br> git branch
+          <br><br> by the way: git branch r
+        </td>
+        <td> 
+          create branch on github 
+          <br> ...
+          <br>get code up to date
+          <br>check what is there 
+          <br>see what branch we have
+          <br> get the branches that are not local yet, only on Github
+          <br> switch into new branch 
+          <br> be safe: get everything updated
+          <br> be safe: check what branch I am on
+          <br><br>check remote branches 
+        </td>
+
       </tr>
 
       <tr>
@@ -1050,12 +1086,33 @@
       </tr>
       <tr>
         <td><span class="code">initialize</span></td>
-        <td>git init <br> <br> git clone *link*<br></td>
+        <td>git init 
+        <br> <br> 
+        git clone *link*
+        <br><br>
+        git remote add origin *copied link*
+        git push -u origin master</td>
         <td>
           <ul>
             <li>repo lokal erstellen</li>
             <li>bestehendes repo klonen</li>
+            <li>lokal und github verknüpfen</li>
           </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">Fork</span></td>
+        <td>fork...
+          <br> git clone *link*
+          <br>git remote -v
+          <br>git remote rename origin *forked-repo*
+          <br>github: copy url of our own fork 
+        </td>
+        <td>is a copy of someone elses repo --> do online
+          <br> clones the repo
+          <br>check copy out
+          <br>rename --> from origin to upstream
+          <br>add that as orgin: git remote add origin *link*
         </td>
       </tr>
     </tbody>
