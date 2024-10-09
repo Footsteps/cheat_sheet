@@ -1,0 +1,1072 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+    <title>Angelas Cheatsheet</title>
+  </head>
+  <body>
+    <div class="background">
+      <h1>Angela's cheat sheet</h1>
+
+      <!-- Navigation Bar -->
+<div class="container">
+  <nav>
+    <div class="hover-content">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#bash">SHORTCUTS & BASH</a></li>
+        <li><a href="#typo">TYPO & LINKS & <br>
+                        BUTTONS & LISTS</a></li>
+        <li><a href="#css">CSS BASICS</a></li>
+        <li><a href="#internet">INTERNET BASICS</a></li>
+        <li><a href="#design">DESIGN BASICS</a></li>
+        <li><a href="#fonts">FONTS & COLORS</a></li>
+        <li><a href="#flexbox">FLEXBOX</a></li>
+        <li><a href="#grid">GRID</a></li>
+        <li><a href="#responsive">RESPONSIVE DESIGN</a></li>
+        <li><a href="#git">GIT</a></li>
+      </ol>
+    </div>
+    <span class="arrow-right">&#9654;</span>
+  </nav>
+<main>
+      <div class="container hidden">
+        <h2></h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code"></span></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--SHORTCUTS-->
+      <div class="container bash" id="bash">
+        <h2>Shortcuts / Bash</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <!--bash-->
+            <tr>
+              <td><span class="code">Bash</span></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>touch</li>
+                  <li>code</li>
+                  <li>pwd</li>
+                  <li>mkdir</li>
+                  <li>cat</li>
+                  <li>rm</li>
+                </ul>
+              </td>
+            </tr>
+            <!--vs code-->
+            <tr>
+              <td><span class="code">vs code</span></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li><strong>search</strong>: ctrl + shift + p</li>
+                </ul>
+              </td>
+            </tr>
+            <!--chrome-->
+            <tr>
+              <td><span class="code">chrome</span></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>ctrl + shift + c</li>
+                  <li>f5</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+ <!--LINKS / TYPOGRAPHY / BUTTONS-->
+      <div class="container typography-table" id="typo">
+        <h2>Typography / Links</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <!--typo-->
+            <tr>
+              <td><span class="code">Typography</span></td>
+              <td></td>
+              <td>
+                The best is to aim to have columns that contain roughly 50-75
+                characters per line.
+                <br /><br />
+                Studies have shown that the users read in an “F” Pattern,
+                starting at the top and then scanning along the spine.
+                <br /><br />
+                font-variant: small-caps;
+                <br /><br />
+                normal: 400, bold: 700
+                <br /><br />
+                letter-spacing oder word-spacing: 2px;
+                <br /><br />
+                line-height: 0.87; --> 1. Buchstaben einrücken
+                <br /><br />
+                <code>@font-face {   src: url("fonts/FontFile.ttf"); }</code>
+                <br /><br />
+                <code
+                  >@import
+                  url("https://fonts.googleapis.com/css?family=Raleway:400,
+                  600");</code
+                >
+                <br /><br />
+                <code
+                  >background-image:
+                  url("https://padlet.pics/GreenPark.jpg");</code
+                >
+                <br /><br />
+                <code
+                  >a[href*='florence'] { --> css: target link mit florence
+                  drinne</code
+                >
+              </td>
+            </tr>
+            <!--Links-->
+            <tr>
+              <td><span class="code">Links</span></td>
+              <td>:link <br />:visited <br />:hover, <br />:active,</td>
+              <td>
+                not clicked <br />
+                visited <br />underline weg <br />clicked <br /><code>
+                  href="#question-1"</code
+                ><br /><br />title="ich bin ein tooltip"
+              </td>
+            </tr>
+            <!--Button-->
+            <tr>
+              <td><span class="code">Buttons</span></td>
+              <td>
+                <code>
+                  margin-top: 24px;<br />
+                  margin-bottom: 16px;</code
+                >
+              </td>
+              <td>button appears to be pressed down</td>
+            </tr>
+            <!--title-->
+            <tr>
+              <td><span class="code">Title</span></td>
+              <td></td>
+              <td>< title>Title</title ></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+  <!--css BASICS-->
+      <div class="container" id="css">
+        <h2>CSS basics</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">box model</span></td>
+              <td>content, padding, border, margin</td>
+              <td>
+                problem: border and padding are added to the overall height and
+                width of the box
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">box-sizing: content-box</span></td>
+              <td>: box model used by the browser</td>
+              <td>
+                . Values for the width (200px). problem: width of the box is
+                only calculated by the content
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">box-sizing: border-box</span></td>
+              <td>width: content + border + padding</td>
+              <td>
+                width is now calculated content + border + padding --> content
+                width: auto: the width of the content will be automatically
+                sized after border and padding have been substracted
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">margin </span></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>
+                    <strong>top right bottom left</strong>; 5px 10px 20px =
+                    immer wenn left & right equal sind.
+                  </li>
+                  <li>
+                    <strong>auto</strong>: zentriert ein Element. Dafür MUSS es
+                    aber eine width haben
+                  </li>
+                  <li>
+                    <strong>margin: 0</strong> auto: vertical margin 0,
+                    horizontally centered
+                  </li>
+                  <li>
+                    Horizontal margins add, vertical margins collapse, so the
+                    space between vertically adjacent elements is equal to the
+                    larger margin.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">position</span></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li><strong>block level</strong>: full width</li>
+                  <li>
+                    <strong>default</strong>: static, working with specific
+                    values
+                  </li>
+                  <li>
+                    <strong>relative</strong> to its default static position
+                  </li>
+                  <li>
+                    <strong>absolute</strong>: will be ignored. position
+                    relative to closest parent element
+                  </li>
+                  <li><strong>fixed</strong>: removed from document flow</li>
+                  <li>
+                    <strong>sticky</strong>: removed from document flow
+                    DEPENDING on how much has been scrolled.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">display</span></td>
+              <td>block / inline</td>
+              <td>
+                about sharing horizontal space.<br /><br /><strong
+                  >inline block</strong
+                >: can given a width and accepts somebody next to them.
+                <br /><br /><strong>float</strong>: does not care about specific
+                values, but needs a width. common use: wrapping text around an
+                image.
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">float container</span></td>
+              <td>.img-container { <br>
+                float: left; <br>
+                width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+                <br> padding: 50px; /* if you want space between the images */
+              }</td>
+            </tr>
+            <tr>
+              <td><span class="code">float: clearfix</span></td>
+              <td>.clearfix::after { <br>
+                 content: " "; <br>
+                clear: both;<br>
+                display: table;<br>
+             } <br> <br> <br><br><br>
+            .clearfix: { overflow: auto; }</td>
+             <td> code is used for most webpages <br>
+              The clear property specifies what should happen with the element that is next to a floating element. <br>
+              values: clear <br>
+              <ul>
+                <li>left: the element is pushed left below left floated elements</li>
+                <li>right: element is pushed below right floated elements</li>
+                <li>both: element is pushed below left & right floated elements</li>
+                <li>inherit: element inherits clear value from its parent</li>
+              </ul>
+              values: autoflow: auto --> use if element is larger than floated element
+
+             </td>
+            </tr>
+            <tr>
+              <td>content</td>
+              <td></td>
+              <td><code>.breadcrumb li+li::before {content:">";}</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!--INTERNET BASICS-->
+      <div class="container" id="internet">
+        <h2>Internet basics</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Definition</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">Status Codes</span></td>
+              <td></td>
+              <td>
+                ok (200), moved permanently (301), internal server error (500)
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">HTTPS</span></td>
+              <td>hypertext transfer <br />protocoll secure</td>
+              <td>
+                Browser initiates a request, server responds. Hypertext transfer
+                protocol: standardized set of rules of how browsers and servers
+                communicate with each other
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">internet / www</span></td>
+              <td></td>
+              <td>
+                internet: devices communicate. world wide web: websites
+                communicate
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">IDE</span></td>
+              <td></td>
+              <td>edit, compile, debug</td>
+            </tr>
+            <tr>
+              <td><span class="code">CLI</span></td>
+              <td>Command Line Interfaces</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><span class="code">url</span></td>
+              <td>uniform ressource locator</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="code">browsers</td>
+              <td>software that can read html files</td>
+              <td>
+                <ul>
+                  <li>url request</li>
+                  <li>answer: html files</li>
+                  <li>
+                    browser: searches through file looking for other things to
+                    request (css files, web assets, javascript files) -->
+                    without JS, the website is static. With JS, it gets
+                    interactive
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="code">web 2.0</td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>
+                    dynamic --> userin can interact with website without
+                    reloading it, only updating parts of it--> jquery was the
+                    first JS framework to make fetching possible while the
+                    website is running
+                  </li>
+                  <li>
+                    interactive: user generated content is emphasized --> rise
+                    of frameworks
+                  </li>
+                  <li>
+                    bresponsive web design changed how websites are built -->
+                    they can respond to different sized devices
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--DESIGN BASICS-->
+      <div class="container" id="design">
+        <h2>DESIGN BASICS</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">wireframe</span></td>
+              <td></td>
+              <td>
+                communicate structure (how the pieces of the page will be put
+                together), content (what will be displayed on the page), and
+                functionality (how the interface will work) <br />
+                Wireframes should be created early on in the design process
+                before the team starts with visual details.<br />wie ein
+                Grundriss
+              </td>
+            </tr>
+            <tr>
+              <td class="code">prototype</td>
+              <td></td>
+              <td>
+                While wireframes handle structure, prototypes handle
+                usability.<br />process of exploring an idea by building an
+                interactive experience. <br />
+                The goal of a prototype is to simulate the interaction between
+                the user and the interface. <br />
+                When starting the prototyping phase, it’s important to try as
+                many different ideas as possible.
+              </td>
+            </tr>
+            <tr>
+              <td class="code">colors</td>
+              <td></td>
+              <td>
+                Primary colors: red, blue & yellow.<br />Secondary colors:
+                mixing 2 primary colors
+              </td>
+            </tr>
+            <tr>
+              <td class="code">rgb</td>
+              <td></td>
+              <td>red, green, blue</td>
+            </tr>
+            <tr>
+              <td class="code">hsla</td>
+              <td>Hue<br />saturation<br />lightness<br />Alpha</td>
+              <td>
+                pure color. expressed as the angle in degrees around the color
+                wheel <br />intensity of the color (100% is full, 0% is
+                completely grey) <br />0% is black, 100% is white <br />opacity.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--FONTS-->
+      <div class="container" id="fonts">
+        <h2>Schöne Fonts</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">Raleway</span></td>
+              <td></td>
+              <td>
+                @import
+                url("https://fonts.googleapis.com/css?family=Raleway:400, 600");
+              </td>
+            </tr>
+            <tr>
+              <td class="code">Lato</td>
+              <td></td>
+              <td>
+                link
+                href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+                rel="stylesheet"
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--SCHÖNE FARBKOMBIS-->
+      <div class="container">
+        <h2>Schöne Color Schemes</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">gelb-braun-weiß</span></td>
+              <td>gelb<br />braun<br />schwarz<br />weiß</td>
+              <td>#ffc200<br />#333<br />#000<br />#fff</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--FLEXBOX-->
+      <div class="container" id="flexbox">
+        <h2>FLEXBOX</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">default styles</span></td>
+              <td>
+                flex-direction<br />justify-content<br />flex-shrink
+                <br />align-items <br />flex-basis <br />flex-wrap
+              </td>
+              <td>
+                row<br />flex-start --> child moves to the upper left corner of
+                the parent container<br />1 --> if parent container is not wide
+                enough, child will shrink<br />stretch <br />auto <br />no-wrap
+                --> items will try to fit in 1 line
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">basics</span></td>
+              <td>
+                main idea<br />use case<br />vs grid <br /><br />display: flex
+                <br />display: inline-flex
+              </td>
+              <td>
+                give the container the ability to alter its items’ width/height
+                (and order) to best fill the available space (mostly to
+                accommodate to all kind of display devices and screen sizes)
+                <br />
+                designed for elements where the size is either unknown or
+                flexibel
+                <br />
+                Flexbox layout is most appropriate to the components of an
+                application, and small-scale layouts, while the Grid layout is
+                intended for larger scale layouts.
+                <br /><br />
+                parent-element bleibt block-element, aber das Verhalten der
+                Kinder ändert sich <br />parent selbst wird inline und
+                akzeptiert andere divs neben sich - if the page is wide enough
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">flex-direction</span></td>
+              <td>
+                values <br /><br /><br /><br />positioning main axis
+                <br /><br />positioning cross axis
+              </td>
+              <td>
+                row<br />row-reverse<br />column<br />column-reverse
+                <br /><br />
+                justify-content, flex-wrap, flex-grow, flex-shrink
+                <br /><br />align-items, align-content
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="code">justify-content <br />(main axis)</span>
+              </td>
+              <td>
+                flex-start <br />center <br />
+                flex-end <br />space-around <br />space-between
+                <br />space-evenly
+              </td>
+              <td>
+                <br /><br /><br />equal space before and after each item
+                <br />equal space between them, but no extra space before or
+                after <br />
+                equal space between and before and after each item
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="code">align-items <br />(cross axis)</span>
+              </td>
+              <td>
+                flex-start <br />center <br />
+                flex-end <br />baseline <br />stretch
+              </td>
+              <td>
+                top <br />halfway between top & bottom<br />bottom<br />the
+                bottom of the content of all items will be aligned with each
+                other <br />items will stretch from top to bottom of the
+                container - except when items have a fixed height.
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">flex-wrap / flex-flow</span></td>
+              <td>
+                nowrap <br />wrap <br />wrap-reverse <br /><br />flex-flow
+              </td>
+              <td>
+                1 line --> meaning items will shrink to fit the line!<br />multiple
+                lines <br />multiple lines from bottom to top <br /><br />
+                shorthand for flex-direction & flex-wrap --> column wrap
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="code"
+                  >flex-grow / flex-shrink / <br />
+                  flex-basis / flex</span
+                >
+              </td>
+              <td>
+                flex-shrink <br />
+                <br /><br />flex-grow <br />
+                <br />flex-basis <br />
+                <br />flex
+              </td>
+              <td>
+                all flex items shrink proportionally when the flex container is
+                too small. but they will not stretch by default! <br />
+                use values like 0, 1, 2 (will be twice as big as the other one.
+                0 will not change at all when used with grow)<br />
+                <br />If there is too much space declare flex-grow: 1; items
+                will grow at an even rate. stop growing: use max-width<br />
+                <br />"starting value" in px. limited by max-width / max-height
+                (when direction is column). will override width (or height if
+                column). <br /><br />flex-grow, flex-shrink, and flex-basis -->
+                flex: 1 2 150px
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">align-content (if wrap)</span></td>
+              <td>
+                flex-start <br />flex-end <br />center <br />space-between
+                <br />space-around <br />
+                stretch
+              </td>
+              <td>
+                all row elements will be at the top, no extra space between
+                <br />all at the bottom, no extra space between <br />
+                center, no extra space <br />spaced evenly, no room above or
+                below them <br />spaced evenly, everywhere <br />fill parent
+                container if no min-height or height is specified
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="code">order </span>
+              </td>
+              <td></td>
+              <td>z.B. 5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--GRID-->
+      <div class="container" id="grid">
+        <h2>GRID</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">Basics - container</span></td>
+              <td>
+                grid-template<br />grid-template-columns with repeat <br />
+                <br />
+                <br />
+                minmax<br />
+                max-width / height <br />
+                column-gap / row-gap <br />gap <br /><br />
+                width or height of an item <br />
+                x axis: justify-items (position of the items inside the grid)
+                <br />x axis: justify-content (position the grid inside its
+                container) <br />y-axis: align-items (position of the items
+                inside the grid) <br />y-axis: align-content (position the grid
+                inside its container)
+              </td>
+              <td>
+                2fr 1fr 1fr / 1fr 3fr 1fr --> each fraction taking up the space
+                that is there. <br />
+                repeat(3, 1fr);<br /><br />grid-template-columns: repeat(2,
+                <strong>20px 50px</strong>) = 4 columns, 1st & 3rd: 20px, 2nd &
+                4th: 50px <br />grid-template-columns: 100px
+                <strong>minmax(100px, 500px)</strong> 100px; --> NO FIXED WIDTH!
+                <br />
+                grid-template-columns: 1fr fit-content(20%); <br />
+                no additional space gets added to the table! <br />
+                row & column <br />
+                <br />
+                if there is no given width or height, the item will stretch. if
+                there is another value, it will only be as tall as necessary to
+                contain their content. <br />
+                values: start / end / center / stretch (default). If an item has
+                a width that is smaller than the width of it's column, I can
+                position it inside the column.
+                <br />values: start / end / center / stretch / space-around /
+                space-between / space-evenly <br />
+                values: values: start / end / center / stretch (default). If an
+                item has a width that is smaller than the width of it's row, I
+                can position it inside the row. <br />
+                values: start / end / center / stretch / space-around /
+                space-between / space-evenly
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">Basics - item</span></td>
+              <td>
+                grid-row: 5 / 7; <br />
+                grid-column: 4 / span 2; <br />
+                grid-column: 4 / 6; <br />
+                grid-area: 2 / 3 / 4 / span 5; <br />
+                <br />
+                justify-self <br />
+                align-self
+              </td>
+
+              <td>
+                short for: begin at line 5 and take up line 6 too <br />
+                short for: begin at column 4 and span 2 columns <br />
+                <br />
+                row start / column start / row end / column end <br />
+                <br />
+                position item on x-axis: start / end / center / stretch <br />
+                position item on y-axis: start / end / center / stretch
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">grid-template</span></td>
+              <td>
+                grid-template-areas
+                <br /><br /><br /><br /><br />grid-template-rows <br />
+                grid-template-columns <br />
+                <br />
+                in class
+              </td>
+              <td>
+                "header header" <br />
+                "nav nav" <br />
+                "left right" <br />
+                ". footer"; <br />
+                <br />
+                1.5fr 2fr 6fr 2fr; <br />
+                2fr 6fr; <br /><br />
+                grid-area: header;
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">implicit grid</span></td>
+              <td>
+                default behavior for the placement of elements when there
+                <br />are more than fit into the grid specified by the CSS.
+              </td>
+              <td>
+                <ul>
+                  <li>declared on grid container</li>
+                  <li>
+                    default: <strong> height & width </strong> of the content.
+                    change with...
+                  </li>
+                  <li>
+                    <strong>grid-auto-rows</strong>: height of the new row
+                    (accepts: px, %, fr, repeat)
+                  </li>
+                  <li>
+                    <strong>grid-auto-columns</strong>: width of the new column
+                    (accepts: px, %, fr, repeat)
+                  </li>
+                  <br />
+                  <br />
+                  <li>grid-auto-flow: row --> adds a row for the new item</li>
+                  <li>
+                    grid-auto-flow: column --> adds a column for the new item
+                    (same height as the other ones)
+                  </li>
+                  <li>
+                    grid-auto-flow: dense -->fills the holes. can be combinend
+                    with row or column
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- RESPONSIVE DESIGN-->
+      <div class="container" id="responsive">
+        <h2>RESPONSIVE DESIGN</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">font-size</span></td>
+              <td>
+                em <br />
+                rem <br />
+                min-width / max-width
+              </td>
+              <td>
+                relative to parent element or default of browser --> 2em means
+                double that <br />
+                relative to root element which is html. advantage: all elements
+                are compared to the same value <br />
+                for example: to keep the text readable
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">%</span></td>
+              <td>
+                width: relative to parent element <br />
+                padding & margin <br />
+                vertical
+              </td>
+              <td>
+                commonly used to size box-model features, like the width,
+                height, padding, or margin <br />NOTE: 100% should only be used
+                when content will not have padding, border, or margin <br />
+                NOTE: vertical will also be set relative to the WIDTH of the
+                parent element
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">images</span></td>
+              <td>
+                common design pattern <br /><br /><br />
+                or, if image is larger than container:
+              </td>
+              <td>
+                .container { width: 50%; height: 200px; overflow: hidden; }
+                <br />
+                .container img { max-width: 100%; height: auto; display: block;
+                } <br /><br />
+                .container img { max-height: 100%; width: auto; display: block;
+                }
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">background images</span></td>
+              <td>
+                background-repeat: no-repeat;<br />
+                background-position: center;<br />
+                background-size: cover;<br />
+              </td>
+              <td>
+                default: repeat <br />
+                center <br />
+                cover
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">meta tag</span></td>
+              <td>
+                in head <br />
+                viewport <br />
+                content <br />
+                (width) <br />
+                (initial scale)
+              </td>
+              <td>
+                < meta name="viewport" content="width=device-width,
+                initial-scale=1" ><br />
+                tells browser to display the page at the same width as its
+                screen <br />
+                defines the values for the <meta /> tag... <br />
+                like <strong>width=device-width</strong> sets viewport width
+                and... <br />
+                <strong>initial scale</strong> sets initial zoom level
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">media queries</span></td>
+              <td>
+                The dimensions at which the layout breaks or looks odd <br> become your media query breakpoints <br>
+                <a href="https://content.codecademy.com/courses/freelance-1/unit-5/screen-sizes.png">Link screen sizes</a>
+              </td>
+              <td>
+                @media only screen and (max-width: 480px) and (min-width: 320px) { <br />
+                body { <br />
+                font-size: 12px; <br />
+                } <br />
+                }
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">media queries: Resolution</span></td>
+              <td>dpi or dpc</td>
+              <td>
+                @media only screen and (min-resolution: 150dpi) {} --> high
+                resolution
+              </td>
+            </tr>
+            <tr>
+              <td><span class="code">media queries</span></td>
+            <td>combined: and <br>
+            entweder-oder: ,</td>
+            <td>@media only screen and (max-resolution:150dpi) and (max-width:480px) <br>
+              @media only screen and (min-width: 480px), (orientation: landscape)
+               
+            </td>
+            </tr>
+            <tr>
+              <td><span class="code">media queries: oft benutzt</span></td>
+              <td>max-resolution:150dpi und max-width:480px</td>
+              <td>font-size: 20px / image größer (dann auch min-width von 320px) / title-width</td>
+            </tr>
+            <tr>
+              <td><span class="code">stack overflow media queries</span></td>
+            <td></td>
+            <td>@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ } <br>
+              @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }   <br>
+              @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ } <br>
+              @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ } <br>
+              @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ } <br>
+              @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+              </td>
+            </tr> 
+            
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TRANSITION-->
+      <div class="container">
+        <h2>TRANSITION</h2>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code">basics</span></td>
+              <td>transition-property: <br>
+              transition-duration: <br>
+              transition-timing-function: <br>
+              transition-delay: <br>
+              transition: ( shorthand, also combined) <br>
+              transition: (shorthand for every property a value has that can transition)
+              </td>
+              <td>background-color / color / font-size / width / height / margin / opacity / visibility / left /<br>
+              default: 0 s / ms <br>
+            ease (default) / ease-in / ease-out / ease-in-out / linear <br>
+            when does transition start?<br>
+            color 1.5s linear 750ms, font-size 750ms ease-in 100ms; <br>
+            <strong>all</strong> 1.5s linear 0.5s;
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+<!--GIT-->
+<div class="container" id="git">
+  <h2>GIT</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="code">Git Basics</span></td>
+        <td>git...</td>
+        <td><ul>
+          <li>helps to manage projects (repos)</li>
+          <li>by: cloning a repo, pulling to a local copy, pushing to remote repo</li>
+          <li>we stage & commit to control & track changes</li>
+          <li>we branch & merge to allow different parts & versions of a project</li> <br>
+          <li>if I create a repo, git now creates a hidden folder to keep track of changes (modified)</li>
+          <li>if I commit, git stores a permanent snapshop of the files</li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td><span class="code">commands</span></td>
+        <td> git status <br>
+        git add <br>
+        git commit -m "my msg" (commit without adding)
+         <br> git push origin
+        <br>
+        git log 
+        <br> git diff origin/master
+        <br> git help --all / git *command* -help
+        <br>
+        
+        </td>
+        <td> git status --short / <br>
+         *file* / git add --all / git rm --cached *file*<br>
+        git commit -a -m "msg" 
+        <br> git push origin
+        <br> view log history
+        <br> view differences
+        <br> view options
+        <br>
+        
+      </td>
+      </tr>
+      <tr>
+        <td><span class="code">branches</span></td>
+        <td>use cases
+          <br><br>
+          git branch new-design & git branch & git switch new-design
+          <br> <br>
+          git switch -c *branch-name* 
+          <br> git checkout / switch master 
+          <br> git merge new-design
+          <br> git branch -d new-design
+        </td>
+
+        <td> Branches allow you to work on different parts of a project without impacting the main branch (like fix errors, new design...). <br>
+          <br><br>
+          <br>
+          git checkout -b new design
+          <br>
+          go to master, merge, delete
+          <br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <td><span class="code">pull</span></td>
+        <td> git pull origin
+          <br>combination of fetch + merge 
+          <br>git merge origin/master   
+        </td>
+        <td> lokale branch auf aktuellen Stand mit Master bringen
+          <br>fetch: gets change history (see with log or diff or status) 
+          <br> meine branch mit master mergen
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">initialize</span></td>
+        <td>git init <br> <br> git clone *link*<br></td>
+        <td>
+          <ul>
+            <li>repo lokal erstellen</li>
+            <li>bestehendes repo klonen</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <!--end-->
+    </div>
+    </main>
+    <!--background div-->
+    </div>
+
+  </body>
+</html>
