@@ -24,6 +24,7 @@
         <li><a href="#flexbox">FLEXBOX</a></li>
         <li><a href="#grid">GRID</a></li>
         <li><a href="#responsive">RESPONSIVE DESIGN</a></li>
+        <li><a href="#trans">TRANSITIONS & ANIMATIONS</a></li>
         <li><a href="#git">GIT</a></li>
       </ol>
     </div>
@@ -938,9 +939,9 @@
         </table>
       </div>
 
-      <!-- TRANSITION-->
-      <div class="container">
-        <h2>TRANSITION</h2>
+      <!-- TRANSITION & ANIMATION-->
+      <div class="container" id="trans">
+        <h2>TRANSITION & ANIMATION</h2>
         <table>
           <thead>
             <th>Name</th>
@@ -964,6 +965,38 @@
             color 1.5s linear 750ms, font-size 750ms ease-in 100ms; <br>
             <strong>all</strong> 1.5s linear 0.5s;
             </td>
+            </tr>
+            <tr>
+              <td><span class="code">TRANSITIONS</span></td>
+              <td>
+                Keyframes
+                <br>Animation Properties 
+                <br><br>@keyframes bounceIn { <br>
+                  0% { <br>
+                    transform: scale(0.1); <br>
+                    opacity: 0; <br>
+                  } <br>
+                  60% { <br>
+                    transform: scale(1.2); <br>
+                    opacity: 1; <br>
+                  } <br>
+                  100% { <br>
+                    transform: scale(1); <br>
+                  } <br>
+                } <br>
+                <br>animation: bounceIn 2s;
+              </td>
+              <td>
+                stages and styles of the animation
+                <br> assign the name and define the how
+                <br><br> bounceIn is the name of the animation
+                <br>
+                <br>it has 3 stages
+                <br> 1st stage: opacity is 0 and element is 10% of its size 
+                <br> 1.2 means 120%, 1 means 100%
+                <br><br><br><br><br><br><br><br><br>
+                properties: name + duration
+              </td>
             </tr>
           </tbody>
         </table>
