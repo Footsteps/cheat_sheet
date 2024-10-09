@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400, 600");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  background-color: white;
+}
+
+.background {
+  background-image: url("https://padlet.pics/1/image?t=c_lfill,dpr_1,f_auto,g_auto,h_1206,q_auto:best,w_2144&url=https%3A%2F%2Fpadlet.net%2Fwallpapers%2Fv0%2Fb0cdc8116874351fb8b2291edde87a2e%2F2b79d0e2%2FGreenPark.jpg");
+  opacity: 0.8;
+  z-index: -100;
+}
+
+main {
+  margin: 0 0 0 4rem;
+}
+
+
+nav:hover {
+  left: 0;
+}
+
+.container {
+  display: inline-block;
+  margin: 0 2% 1%;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+}
+
+table {
+  border: 2px solid #004225;
+  width: auto;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+thead {
+  background-color: #004225;
+  color: white;
+}
+
+td {
+  border-top: 1px solid #004225;
+  color: #004225;
+  padding: 10px;
+  text-align: left;
+}
+
+.code {
+  font-variant: small-caps;
+  color: #004225;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f3e5ab;
+}
+
+tr:nth-child(even):hover {
+  background-color: #FFF8DC;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+/*Navigation Bar*/
+.arrow-right {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #046307;
+  padding: 0 2.5rem 0 2.5rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 0 0 2rem;
+
+  display: flex;
+  align-items: center;
+  
+  height: 100%;
+  left: -17.8em;
+  
+  cursor: pointer;
+  
+  font-family: "Proza libre", serif;
+  font-size: 1.125rem;
+  line-height: 2.2;
+  font-weight: bold;
+  
+  color: #004225;
+  transition: left 450ms linear 0.1s;
+  background:#FFFEFA;
+
+  opacity: 0.95;
+}
+
+nav:hover {
+  left: 0;
+}
+
+nav .hover-content {
+  margin: 0 3em 0 1.5em;
+}
+
+nav img {
+  width: 2rem;
+}
+
+nav h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.6em;
+}
+
+nav ol {
+  list-style: upper-roman outside;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 350ms ease-in;
+}
+
+nav a:hover, nav a.active {
+  color: #FFA62F;
+}
+
