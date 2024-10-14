@@ -21,11 +21,6 @@ main {
   margin: 0 0 0 4rem;
 }
 
-
-nav:hover {
-  left: 0;
-}
-
 .container {
   display: inline-block;
   margin: 0 2% 1%;
@@ -87,7 +82,8 @@ ul {
   font-size: 3rem;
   cursor: pointer;
   color: #046307;
-  padding: 0 2.5rem 0 2.5rem;
+  margin: 0 1rem 0 -2rem;
+  text-align: center;
 }
 
 nav {
