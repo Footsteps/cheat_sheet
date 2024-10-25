@@ -1222,6 +1222,11 @@
           <li>global</li>
           <li>core modules</li>
           <li>console methods</li>
+          <li>os methods</li>
+          <li>util methods</li>
+          <li>types.isDate(variable)</li>
+          <li>promisify</li>
+          <br><br><br>
           
         </td>
         <td>
@@ -1231,6 +1236,13 @@
           <li>every node property is inside</li>
           <li>built-in modules that must be required and stored in a variable (like process, os) --> see all of them: require('module').builtinModules</li>
           <li>table() & assert()</li>
+          <li>type() - operating system, networkInterfaces() - such as IP adress, homedir() - return to home directory, .arch() - architecture (x64...), os.freemem() --> free memory</li>
+          <li>checks type (in this case: if something is a Date object) and gives back a boolean </li>
+          <li>turns callbacks into promises: <br>
+            const getUserPromise = util.promisify(getUser);<br>
+            getUserPromise(id) <br>
+            .then((user) => {}) <br>
+            .catch((error) => {}) <br></li>
         </td>
       </tr>
     </tbody>
