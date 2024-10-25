@@ -27,6 +27,7 @@
         <li><a href="#trans">TRANSITIONS & ANIMATIONS</a></li>
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
+        <li><a href="#devtools">DEVTOOLS</a></li>
       </ol>
     </div>
     <span class="arrow-right">&#9654;</span>
@@ -1178,12 +1179,86 @@
         <td><span class="code">Javascript notes</span></td>
         <td><ul>
           <li>falsy values</li>
-          
         </ul></td>
         <td><ul>
           <li>null, undefined, NaN, empty strings, 0</li>
 
         </ul></td>
+      </tr>
+      <tr>
+        <td><span class="code">JS ASYNC (callback)</span></td>
+        <td>
+          <li>callback</li>
+          <li>asynchronous... </li>
+          <li>with a timeout </li>
+          <li>or with an interval</li>
+        </td>
+        <td>
+          <li>a function passed into another function as an argument</li>
+          <li>callbacks are very hard to debug. that is why we use promises instead</li>
+          <li>setTimeout(function() { myFunction("I love You !!!"); }, 3000);</li>
+          <li>setInterval(myFunction, 1000);</li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">backend basics</span></td>
+        <td><li>web server</li>
+          <li>databases</li>
+          <li>web API</li>
+          <li>framework</li>
+          <li>JSON data types</li></td>
+        <td><li>process on computer listening to requests & sending responses</li>
+          <li>relational: store info in tables (SQL, MongoDB, Redis). non-relational: other systems, for example key-value pairs</li>
+          <li>predefined rules about dealing with an applications data(base)</li>
+          <li>express.js</li>
+          <li>string (double-quoted), number, object (name-value pair), array, boolean, null</li></td>
+      </tr>
+      <tr>
+        <td><span class="code">Node</span></td>
+        <td>
+          <li>runtime environment</li>
+          <li>process</li>
+          <li>process.env</li>
+          <li>global</li>
+          <li>core modules</li>
+          <li>console methods</li>
+          
+        </td>
+        <td>
+          <li>executes JS outside of the browser & has access to file system, databases, networks attached to server --> node</li>
+          <li>object with data relating to the JavaScript file being executed</li>
+          <li>object with environment variables such as PWD (print working directory) </li>
+          <li>every node property is inside</li>
+          <li>built-in modules that must be required and stored in a variable (like process, os) --> see all of them: require('module').builtinModules</li>
+          <li>table() & assert()</li>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- DEVTOOLS-->
+<div class="container" id="devtools">
+  <h2>DEV TOOLS</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="code">page for trial</span></td>
+        <td>
+          <li>open tab</li>
+          <li>add content</li>
+          <li>use query selector</li>
+        </td>
+        <td>
+          <li>about:blank</li>
+          <li> document.body.innerHTML = "< h1>Adding a heading using JS< /h1>"</li>
+          <li>$("body").style.color = "blue"</li>  
+        </td>
       </tr>
     </tbody>
   </table>
