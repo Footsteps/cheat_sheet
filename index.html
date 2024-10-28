@@ -28,6 +28,7 @@
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
+        <li><a href="#sql">SQL</a></li>
       </ol>
     </div>
     <span class="arrow-right">&#9654;</span>
@@ -1204,11 +1205,13 @@
         <td><span class="code">backend basics</span></td>
         <td><li>web server</li>
           <li>databases</li>
+          <li>differences</li>
           <li>web API</li>
           <li>framework</li>
           <li>JSON data types</li></td>
         <td><li>process on computer listening to requests & sending responses</li>
-          <li>relational: store info in tables (SQL, MongoDB, Redis). non-relational: other systems, for example key-value pairs</li>
+          <li>relational: store info in tables (PostgreSQL, MySQL, SQLite, Oracle). non-relational: other systems (MongoDB, Redis, ElasticSearch, Firebase)</li>
+          <li>sql: same query language, tend to have general purpose vs: specialized (MongoDB &Dynamo: documents, Redis: cashing, ElasticSearch: searching & aggregations, Firebase(realtime)) </li>
           <li>predefined rules about dealing with an applications data(base)</li>
           <li>express.js</li>
           <li>string (double-quoted), number, object (name-value pair), array, boolean, null</li></td>
@@ -1225,6 +1228,8 @@
           <li>os methods</li>
           <li>util methods</li>
           <li>types.isDate(variable)</li>
+          <li>module.exports</li>
+          <li>require('./file.js');</li>
           <li>promisify</li>
           <br><br><br>
           
@@ -1232,12 +1237,14 @@
         <td>
           <li>executes JS outside of the browser & has access to file system, databases, networks attached to server --> node</li>
           <li>object with data relating to the JavaScript file being executed</li>
-          <li>object with environment variables such as PWD (print working directory) </li>
+          <li>object with environment variables such as PWD (print working directory) or argv (array with given arguments)</li>
           <li>every node property is inside</li>
           <li>built-in modules that must be required and stored in a variable (like process, os) --> see all of them: require('module').builtinModules</li>
           <li>table() & assert()</li>
           <li>type() - operating system, networkInterfaces() - such as IP adress, homedir() - return to home directory, .arch() - architecture (x64...), os.freemem() --> free memory</li>
           <li>checks type (in this case: if something is a Date object) and gives back a boolean </li>
+          <li>module.exports.celsiusToFahrenheit = celsiusToFahrenheit; / module.exports.celsiusToFahrenheit = function(wje) {}</li>
+          <li>const converters = require('./converters.js');</li>
           <li>turns callbacks into promises: <br>
             const getUserPromise = util.promisify(getUser);<br>
             getUserPromise(id) <br>
@@ -1245,6 +1252,38 @@
             .catch((error) => {}) <br></li>
         </td>
       </tr>
+      <tr>
+        <td><span class="code">NPM</span></td>
+        <td>
+          <li>-g</li>
+          <li>npm i</li>
+        </td>
+        <td>
+          <li>install a package globally --> npm install http-server -g</li>
+          <li>if json is there: installs all dependencies</li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">Events Module</span></td>
+      <td>
+        <li>require module & create instance of events emitter</li>
+        <li>myEmitter.on('name of event', function)</li>
+        <li>myEmitter.emit('name of event', data)</li>
+      </td>
+      <td>
+        <li>let events = require('events'); let myEmitter = new events.EventEmitter();</li>
+        <li>myEmitter.on('new user', newUserListener)</li>
+        <li>announce when event has occured. </li>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="code">Error Module</span></tr></td>
+      <td>
+        <li>global scope</li>
+      </td>
+      <td>
+        <li>=there is no need to import it</li>
+      </td>
     </tbody>
   </table>
 </div>
@@ -1276,6 +1315,42 @@
   </table>
 </div>
 
+<!-- SQL-->
+<div class="container" id="sql">
+  <h2>SQL</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="code">databases</span></td>
+        <td>
+          <li>sqlite</li>
+          <li>postgres</li>
+        </td>
+        <td>
+          <li>good for embedded stuff / store anything anywhere</li>
+          <li>serves as a server & good for massive amounts. lots of features. typechecking.</li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">do things</span></td>
+        <td>
+          <li>CREATE TABLE users (id INTEGER, name TEXT, some BOOLEAN);</li>
+          <li>SELECT id, name from users;</li>
+        </td>
+        <td>
+          <li>create table</li>
+          <li>read all</li>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
       <!--end-->
     </div>
     </main>
