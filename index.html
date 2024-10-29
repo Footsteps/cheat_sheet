@@ -27,6 +27,7 @@
         <li><a href="#trans">TRANSITIONS & ANIMATIONS</a></li>
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
+        <li><a href="#node">NODE</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
         <li><a href="#sql">SQL</a></li>
       </ol>
@@ -1216,6 +1217,20 @@
           <li>express.js</li>
           <li>string (double-quoted), number, object (name-value pair), array, boolean, null</li></td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- NODE-->
+<div class="container" id="node">
+  <h2>NODE</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
       <tr>
         <td><span class="code">Node</span></td>
         <td>
@@ -1231,7 +1246,7 @@
           <li>module.exports</li>
           <li>require('./file.js');</li>
           <li>promisify</li>
-          <br><br><br>
+          <br><br><br><br>
           
         </td>
         <td>
@@ -1277,13 +1292,41 @@
       </td>
     </tr>
     <tr>
-      <td><span class="code">Error Module</span></tr></td>
+      <td><span class="code">Error Module</span></td>
       <td>
         <li>global scope</li>
+        <li>possible instances</li>
       </td>
       <td>
         <li>=there is no need to import it</li>
+        <li>EvalError, SyntaxError, RangeError, ReferenceError, TypeError, URIError, Error</li>
       </td>
+    </tr>
+      <tr>
+        <td><span class="code">Buffer Module</span></td>
+        <td>
+          <li>global scope</li>
+          <li>methods</li>
+        </td>
+        <td>
+          <li>A Buffer object represents a fixed amount of memory that can’t be resized.</li>
+          <li>toString(), from(), concat(), alloc(5) --> creates a new Buffer object with the size specified as the 1st paramter</li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">fs API</span></td>
+        <td>
+          <li>const fs</li>
+          <li>method readFile</li>
+        </td>
+        <td>
+          <li>require('fs')</li>
+          <li>"fs.readFile('./file.txt', 'utf-8', readDataCallback);"</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
