@@ -28,6 +28,7 @@
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
         <li><a href="#node">NODE</a></li>
+        <li><a href="#server">HTTP SERVER</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
         <li><a href="#sql">SQL</a></li>
       </ol>
@@ -35,7 +36,7 @@
     <span class="arrow-right">&#9654;</span>
   </nav>
 <main>
-      <div class="container hidden">
+      <div class="container hidden" id="">
         <h2></h2>
         <table>
           <thead>
@@ -193,6 +194,11 @@
             <th>Notes</th>
           </thead>
           <tbody>
+            <tr>
+              <td><span class="code">Link to file</span></td>
+              <td></td>
+              <td> < link rel="stylesheet" href="./style.css" type="text/css" /></td>
+            </tr>
             <tr>
               <td><span class="code">box model</span></td>
               <td>content, padding, border, margin</td>
@@ -1181,10 +1187,12 @@
         <td><span class="code">Javascript notes</span></td>
         <td><ul>
           <li>falsy values</li>
+          <li>for (const value of iterable) {}
+          </li>
         </ul></td>
         <td><ul>
           <li>null, undefined, NaN, empty strings, 0</li>
-
+          <li></li>
         </ul></td>
       </tr>
       <tr>
@@ -1212,7 +1220,7 @@
           <li>JSON data types</li></td>
         <td><li>process on computer listening to requests & sending responses</li>
           <li>relational: store info in tables (PostgreSQL, MySQL, SQLite, Oracle). non-relational: other systems (MongoDB, Redis, ElasticSearch, Firebase)</li>
-          <li>sql: same query language, tend to have general purpose vs: specialized (MongoDB &Dynamo: documents, Redis: cashing, ElasticSearch: searching & aggregations, Firebase(realtime)) </li>
+          <li>sql: same query language, tend to have general purpose vs: specialized <br>(MongoDB &Dynamo: documents, Redis: cashing, ElasticSearch: searching & aggregations, Firebase(realtime)) </li>
           <li>predefined rules about dealing with an applications data(base)</li>
           <li>express.js</li>
           <li>string (double-quoted), number, object (name-value pair), array, boolean, null</li></td>
@@ -1238,33 +1246,51 @@
           <li>process</li>
           <li>process.env</li>
           <li>global</li>
-          <li>core modules</li>
-          <li>console methods</li>
-          <li>os methods</li>
-          <li>util methods</li>
-          <li>types.isDate(variable)</li>
-          <li>module.exports</li>
-          <li>require('./file.js');</li>
-          <li>promisify</li>
-          <br><br><br><br>
-          
+          <li>core modules</li>         
         </td>
         <td>
           <li>executes JS outside of the browser & has access to file system, databases, networks attached to server --> node</li>
           <li>object with data relating to the JavaScript file being executed</li>
           <li>object with environment variables such as PWD (print working directory) or argv (array with given arguments)</li>
           <li>every node property is inside</li>
-          <li>built-in modules that must be required and stored in a variable (like process, os) --> see all of them: require('module').builtinModules</li>
-          <li>table() & assert()</li>
-          <li>type() - operating system, networkInterfaces() - such as IP adress, homedir() - return to home directory, .arch() - architecture (x64...), os.freemem() --> free memory</li>
+          <li>built-in modules that must be required and stored in a variable (like process, os) --> see all of them: require('module').builtinModules</li>     
+        </td>
+      </tr>
+      <tr>
+        <td> <span class="code">common methods</span></td>
+        <td> 
+          <li>console methods</li> 
+          <li>types.isDate(variable)</li>
+          <li>os methods</li> <br>
+          </td>
+        <td>
+          <li>table() & assert()</li>    
           <li>checks type (in this case: if something is a Date object) and gives back a boolean </li>
-          <li>module.exports.celsiusToFahrenheit = celsiusToFahrenheit; / module.exports.celsiusToFahrenheit = function(wje) {}</li>
-          <li>const converters = require('./converters.js');</li>
-          <li>turns callbacks into promises: <br>
+          <li>type() - operating system, networkInterfaces() - such as IP adress, homedir() - return to home directory, <br>.arch() - architecture (x64...), os.freemem() --> free memory</li>
+         </td>
+      </tr>
+      <tr>
+        <td><span class="code">promisify</span></td>
+        <td>turns callbacks into promises: </td>
+        <td>
+          <li>
             const getUserPromise = util.promisify(getUser);<br>
             getUserPromise(id) <br>
             .then((user) => {}) <br>
             .catch((error) => {}) <br></li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">require</span></td>
+        <td>
+          <li>export</li> <br><br>
+          <li>import</li> <br>
+        </td>
+        <td>
+          <li>module.exports.celsiusToFahrenheit = function(arg) {} <br> module.exports = {run};</li> <br>
+          <li>const.file = require('./file.js'); <br>
+              const exportedMethod = file.exportedMethod;
+          </li>
         </td>
       </tr>
       <tr>
@@ -1324,8 +1350,58 @@
           <li>"fs.readFile('./file.txt', 'utf-8', readDataCallback);"</li>
         </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SETTING UP A HTTP SERVER-->
+<div class="container" id="server">
+  <h2>SETTING UP A HTTP SERVER</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
       <tr>
-        <td></td>
+        <td><span class="code">HTTP module</span></td>
+        <td>createServer</td>
+        <td>
+          const http = require("http"); <br><br>
+          const server = http.createServer((req, res) => { <br>
+          res.end('Server is running!'); <br>
+        }); <br><br>
+        
+        server.listen(8080, () => { <br>
+          const { address, port } = server.address(); <br>
+          console.log(`Server is listening on: http://${address}:${port}`); <br>
+        })
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">url module</span></td>
+        <td><li>create request url</li> <br>
+          <li>check properties</li>
+        </td>
+        <td>
+          <li>let url = import("url"); <br>
+              url = new URL('https://www.hostname.com/pathname?query=search');</li>
+          <li>url.hostname / url.pathname / url.searchParams</li>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="code">Querystring Module</span></td>
+        <td>
+          <li>there to parse & format URL query strings</li>
+          <li>.parse()</li>
+          <li>stringify()</li>
+        </td>
+        <td>
+          <li>const querystring = import("querystring");</li>
+          <li>const str = "prop1=value1&prop2=value2" querystring.parse(str) // {prop1: value, prop2: value2}</li>
+          <li>const props = { "prop1": value1, "prop2": value2}; querystring.stringify(props);</li>
+        </td>
       </tr>
     </tbody>
   </table>
