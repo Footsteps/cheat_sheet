@@ -1514,21 +1514,25 @@
           <li>short for</li>
           <li>used for</li>
           <li>const regex = /hello/;</li>
-          <li>const regex = /\+-/;</li>
-          <li>shorthand character classes</li>
-          <li>... \s</li>
+          <li>const regex = /[+-s]/;</li>
+          <li>shorthand character classes: [+], [-], [\s]</li>
+          <li>g flag, i flag</li>
+          <li>+ modifier</li>
+          <li>.replace</li>
+          <li>\d</li>
+          <li>.match(regexargument)</li>
         </td>
         <td>
           <li>regular expressions</li>
           <li>To match specific characters in a string</li>
           <li>indicated by a pattern wrapped in forward slashes --> will be an exact match for "hello"</li>
           <li>match for + and - --> + needs to be escaped with \</li>
-          <li>...</li>
-          <li>...whitespace</li>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <li>[] turns it into character classes, not the exact expression I am looking for --> s is whitespace</li>
+          <li>/[+-\s]/g --> the g flag stands for global and tells regex to continue looking for the pattern after it has found a match. I: insensitive</li>
+          <li>match a pattern that occurs one or more times. For example: [0-9]+</li>
+          <li>str.replace(/[+-\s]/, "") --> replaces plus, minus and whitespaces with an empty string </li>
+          <li>shorthand character class to match any digit: \d. example: const regex = /\d+e\d+/i;</li>
+          <li>returns array of match results – containing either the first match, or all matches if the global flag is used. or null if nothing is found</li>
 </div>
       <!--end-->
     </div>
