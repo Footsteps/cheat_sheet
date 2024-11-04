@@ -31,7 +31,7 @@
         <li><a href="#server">HTTP SERVER</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
         <li><a href="#sql">SQL</a></li>
-        <li><a href="#form">FORM VALIDATION</a></li>
+        <li><a href="#form">FORMS</a></li>
       </ol>
     </div>
     <span class="arrow-right">&#9654;</span>
@@ -1188,12 +1188,13 @@
         <td><span class="code">Javascript notes</span></td>
         <td><ul>
           <li>falsy values</li>
-          <li>for (const value of iterable) {}
-          </li>
+          <li>for (const element of elementArray) {}</li>
+          <li>Number('10');</li>
         </ul></td>
         <td><ul>
           <li>null, undefined, NaN, empty strings, 0</li>
-          <li></li>
+          <li> </li>
+          <li>function that converts a value to a number</li>
         </ul></td>
       </tr>
       <tr>
@@ -1472,9 +1473,9 @@
   </table>
 </div>
 
-<!--FORM VALIDATION-->
+<!--FORMS-->
 <div class="container" id="form">
-  <h2>FORM VALIDATION</h2>
+  <h2>FORMS</h2>
   <table>
     <thead>
       <th>Name</th>
@@ -1490,6 +1491,10 @@
           <li>selected="selected"</li>
           <li>type="submit"</li>
           <li>type="button"</li>
+          <li>querySelectorAll('input[type="text"]')</li>
+          <li>insertAdjacentHtml("position", "HTMLString")</li>
+          <li>input.value = "";</li>
+          <li>container.innerHTML = "";</li>
         </td>
         <td>
           <li>in input element type number: allows only positive numbers</li>
@@ -1497,15 +1502,25 @@
           <li>that option is selected as default</li>
           <li>button that will submit the form</li>
           <li>button that will NOT submit the form</li>
+          <li>get all the text inputs --> length</li>
+          <li>adds html while preserving recently added html. container.insertAdjacentHTML("beforeend", HTMLString);</li>
+          <li>clear an input field</li>
+          <li>clear a lot of input fields that have been selected & converted into an array (for (const container in inputFieldContainers))</li>
         </td>
       </tr>
       <tr>
         <td><span class="code">notes javascript</span></td>
         <td>
           <li>values = strings</li>
+          <li>convert to numbers</li>
+          <li>submit event</li>
+          <li>Array.from()</li>
         </td>
         <td>
           <li>values from an input fields are received as strings</li>
+          <li>Number(str);</li>
+          <li>default: trigger is reload. --> e.preventDefault();</li>
+          <li>turn array like element (like a node list) into an array</li>
         </td>
       </tr>
       <tr>
@@ -1521,6 +1536,7 @@
           <li>.replace</li>
           <li>\d</li>
           <li>.match(regexargument)</li>
+          <li>alert match</li>
         </td>
         <td>
           <li>regular expressions</li>
@@ -1533,6 +1549,7 @@
           <li>str.replace(/[+-\s]/, "") --> replaces plus, minus and whitespaces with an empty string </li>
           <li>shorthand character class to match any digit: \d. example: const regex = /\d+e\d+/i;</li>
           <li>returns array of match results – containing either the first match, or all matches if the global flag is used. or null if nothing is found</li>
+          <li>if(match) {alert(`Invalid Input: ${invalidInputMatch[0]}` return null;)}</li>
 </div>
       <!--end-->
     </div>
