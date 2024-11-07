@@ -1198,20 +1198,53 @@
         </ul></td>
       </tr>
       <tr>
+        <td><span class="code">access html</span></td>
+        <td><li>element.textContent</li>
+          <li>innerText</li>
+          <li>createElement(tagName)</li>
+          <li>give text to created node</li>
+          <li>give it id</li>
+          <li>give it an aria label</li>
+          <li>append them</li>
+          <li>append the element</li>
+          <li>remove the element </li>
+        </td>
+        <td>
+          <li>retroeve / set text of a node object. element.textContent</li>
+          <li>"only" for html elements</li>
+          <li>const button = document.createElement('button')</li>
+          <li>const resetText = document.createTextNode("Reset Playlist");</li>
+          <li>button.id = "reset";</li>
+          <li>button.ariaLabel = "Reset playlist";</li>
+          <li>button.appendChild(resetText);</li>
+          <li>playlistSongs.appendChild(button);</li>
+          <li>button.remove()</li>
+
+        </td>
+      </tr>
+      <tr>
         <td><span class="code">useful array & object methods</span></td>
         <td><li>array: spread operator</li>
-          <li>array: map</li>
+          <li>array: map (returns results array)</li>
+          <li>array: forEach (returns nothing)</li>
           <li>array: join</li>
           <li>array: sort</li>
           <li>array: find</li>
+          <li>array: indexOf()</li>
+          <li>randomize an array</li>
+          <li>array: filter</li>
           <li>object: optional chaining</li>
         </td>
         <td>
           <li>copy or concatenate arrays: const combinedArr = [...arr1, ...arr2]</li>
           <li>numbers.map((number) => number * 2); Argument: callback function</li>
+          <li>loops through an arr and performs a method on each its item. numbers.forEach((number) => {console.log(number)}</li>
           <li>concatenate all the elements of an array into a single string. optional: separator. Example: .join(" ")</li>
           <li>returns strings sorted by UTF-16 encoding --> look up the callback part</li>
           <li>retrieves the first element within an array that fulfills the conditions specified in the provided callback function. If no element satisfies the condition, the method returns undefined.</li>
+          <li>names.sort(() => Math.random() - 0.5);</li>
+          <li>returns index of found element or returns -1 if it could not be found</li>
+          <li>removes items from the array: userData.songs = userData?.songs.filter((song) => song.id === id);</li>
           <li>function(object?.property) --> prevents errors when accessing nested properties that might be null or undefined. returns undefined then instead of throwing an error</li>
         </td>
       </tr>
