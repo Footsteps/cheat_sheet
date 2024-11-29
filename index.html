@@ -27,6 +27,7 @@
         <li><a href="#trans">TRANSITIONS & ANIMATIONS</a></li>
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
+        <li><a href="#arrays">JS METHODS</a></li>
         <li><a href="#node">NODE</a></li>
         <li><a href="#server">HTTP SERVER</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
@@ -1223,32 +1224,6 @@
         </td>
       </tr>
       <tr>
-        <td><span class="code">useful array & object methods</span></td>
-        <td><li>array: spread operator</li>
-          <li>array: map (returns results array)</li>
-          <li>array: forEach (returns nothing)</li>
-          <li>array: join</li>
-          <li>array: sort</li>
-          <li>array: find</li>
-          <li>array: indexOf()</li>
-          <li>randomize an array</li>
-          <li>array: filter</li>
-          <li>object: optional chaining</li>
-        </td>
-        <td>
-          <li>copy or concatenate arrays: const combinedArr = [...arr1, ...arr2]</li>
-          <li>numbers.map((number) => number * 2); Argument: callback function</li>
-          <li>loops through an arr and performs a method on each its item. numbers.forEach((number) => {console.log(number)}</li>
-          <li>concatenate all the elements of an array into a single string. optional: separator. Example: .join(" ")</li>
-          <li>returns strings sorted by UTF-16 encoding --> look up the callback part</li>
-          <li>retrieves the first element within an array that fulfills the conditions specified in the provided callback function. If no element satisfies the condition, the method returns undefined.</li>
-          <li>names.sort(() => Math.random() - 0.5);</li>
-          <li>returns index of found element or returns -1 if it could not be found</li>
-          <li>removes items from the array: userData.songs = userData?.songs.filter((song) => song.id === id);</li>
-          <li>function(object?.property) --> prevents errors when accessing nested properties that might be null or undefined. returns undefined then instead of throwing an error</li>
-        </td>
-      </tr>
-      <tr>
         <td><span class="code">JS ASYNC (callback)</span></td>
         <td>
           <li>callback</li>
@@ -1281,6 +1256,62 @@
     </tbody>
   </table>
 </div>
+
+<div class="container" id="arrays">
+  <h2>JS METHODS FOR ARRAYS AND OBJECTS</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
+<tr>
+  <td class="code">spread operator</td>
+  <td>[...arr1, ...arr2]</td>
+  <td>copy or concatenate arrays: const combinedArr = [...arr1, ...arr2]</td>
+</tr>
+<tr>
+  <td class="code">map</td>
+  <td>numbers.map((number) => number * 2)</td>
+  <td>returns results array. 2nd argument: callback</td>
+</tr>
+<tr>
+  <td class="code">forEach</td>
+  <td>numbers.forEach((number) => {console.log(number)})</td>
+  <td>returns nothing. </td>
+</tr>
+<tr>
+  <td class="code">join</td>
+  <td>.join(" ")</td>
+  <td>concatenate all the elements of an array into a single string. optional: separator.</td>
+</tr>
+<tr>
+  <td class="code">sort</td>
+  <td>names.sort(() => Math.random() - 0.5);</td>
+  <td>returns strings sorted by UTF-16 encoding. look up call back part</td>
+</tr>
+<tr>
+  <td class="code">find</td>
+  <td>array1.find((element) => element > 10);</td>
+  <td>retrieves the first element within an array that fulfills the conditions specified in the provided callback function. If no element satisfies the condition, the method returns undefined.</td>
+</tr>
+<tr>
+  <td class="code">indexOf()</td>
+  <td>beasts.indexOf('bison');</td>
+  <td>returns index of found element or returns -1 if it could not be found</td>
+</tr>
+<tr>
+  <td class="code">filter</td>
+  <td>userData?.songs.filter((song) => song.id === id);</td>
+  <td>? prevents errors</td>
+</tr>
+<tr>
+  <td class="code">object: optional chaining</td>
+  <td>userData?.songs.filter((song)...)</td>
+  <td>prevents errors when accessing nested properties that might be null or undefined. returns undefined then instead of throwing an error</td>
+</tr>
+
 
 <!-- NODE-->
 <div class="container" id="node">
