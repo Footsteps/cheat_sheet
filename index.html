@@ -27,7 +27,8 @@
         <li><a href="#trans">TRANSITIONS & ANIMATIONS</a></li>
         <li><a href="#git">GIT</a></li>
         <li><a href="#javascript">JAVASCRIPT</a></li>
-        <li><a href="#arrays">JS METHODS</a></li>
+        <li><a href="#arrays">ARRAY METHODS</a></li>
+        <li><a href="#objects">OBJECT METHODS</a></li>
         <li><a href="#node">NODE</a></li>
         <li><a href="#server">HTTP SERVER</a></li>
         <li><a href="#devtools">DEVTOOLS</a></li>
@@ -1191,11 +1192,13 @@
           <li>falsy values</li>
           <li>for (const element of elementArray) {}</li>
           <li>Number('10');</li>
+          <li>constructor</li>
         </ul></td>
         <td><ul>
           <li>null, undefined, NaN, empty strings, 0</li>
           <li> </li>
           <li>function that converts a value to a number</li>
+          <li>built-in functions that creates objects</li>
         </ul></td>
       </tr>
       <tr>
@@ -1258,7 +1261,7 @@
 </div>
 
 <div class="container" id="arrays">
-  <h2>JS METHODS FOR ARRAYS AND OBJECTS</h2>
+  <h2>ARRAY METHODS</h2>
   <table>
     <thead>
       <th>Name</th>
@@ -1311,7 +1314,28 @@
   <td>userData?.songs.filter((song)...)</td>
   <td>prevents errors when accessing nested properties that might be null or undefined. returns undefined then instead of throwing an error</td>
 </tr>
+</tbody>
+</table>
+</div>
 
+<!-- OBJECTS-->
+<div class="container" id="objects">
+  <h2>OBJECT METHODS</h2>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="code">freeze</span></td>
+        <td>Object.freeze(myObject);</td>
+        <td>no changes possible anymore</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <!-- NODE-->
 <div class="container" id="node">
@@ -1634,6 +1658,26 @@
           <li>returns array of match results – containing either the first match, or all matches if the global flag is used. or null if nothing is found</li>
           <li>if(match) {alert(`Invalid Input: ${invalidInputMatch[0]}` return null;)}</li>
           <li>remove spaces and non alphanumerical characters of the whole string, caseinsensitive</li>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="code">toggle</span></td>
+          <td>taskForm.classList.toggle("hidden");</td>
+          <td>will add the class if it is not there and remove it if it is</td>
+        </tr>
+        <tr>
+          <td><span class="code"></span>dialog</td>
+          <td>modal to cancel or discard</td>
+          <td>code: s. local storage to do app: index Zeile 39 und script Zeile </td>
+        </tr>
+        <tr>
+          <td>
+          <span class="code">dialog methods</span></tr> </td>
+          <td>
+            <li>dialogElement.showModal();</li>
+          <li>dialogElement.close();</li></td>
+          <td>click handler on a button & show the modal & close</td>
+
 </div>
       <!--end-->
     </div>
