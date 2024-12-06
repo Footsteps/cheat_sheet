@@ -1214,7 +1214,7 @@
           <li>remove the element </li>
         </td>
         <td>
-          <li>retroeve / set text of a node object. element.textContent</li>
+          <li>retrieve / set text of a node object. element.textContent</li>
           <li>"only" for html elements</li>
           <li>const button = document.createElement('button')</li>
           <li>const resetText = document.createTextNode("Reset Playlist");</li>
@@ -1313,6 +1313,18 @@
   <td class="code">object: optional chaining</td>
   <td>userData?.songs.filter((song)...)</td>
   <td>prevents errors when accessing nested properties that might be null or undefined. returns undefined then instead of throwing an error</td>
+</tr>
+<tr>
+  <td><span class="code">findIndex</span></td>
+  <td>taskArray.findIndex((task) => {
+    return task.id === currentTask.id;
+});</td>
+  <td>returns the index of the first element in an array that meets the criteria specified by a callback. if not found: returns -1</td>
+</tr>
+<tr>
+  <td><span class="code">splice</span></td>
+  <td>const removedFruits = fruits.splice(1, 2);</td>
+  <td>modifies the array: remove, replace or add element at a specific index and returns removed element. 3 Arguments: 1: index, 2: number of items to remove, 3: optional: replacement element</td>
 </tr>
 </tbody>
 </table>
@@ -1672,12 +1684,15 @@
         </tr>
         <tr>
           <td>
-          <span class="code">dialog methods</span></tr> </td>
+          <span class="code">dialog methods</span> </td>
           <td>
             <li>dialogElement.showModal();</li>
           <li>dialogElement.close();</li></td>
           <td>click handler on a button & show the modal & close</td>
-
+        </tr>
+        <tr>
+          
+        </tr>
 </div>
       <!--end-->
     </div>
