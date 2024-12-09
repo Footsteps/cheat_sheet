@@ -34,6 +34,7 @@
         <li><a href="#devtools">DEVTOOLS</a></li>
         <li><a href="#sql">SQL</a></li>
         <li><a href="#form">FORMS</a></li>
+        <li><a href="#local">LOCAL STORAGE</a></li>
       </ol>
     </div>
     <span class="arrow-right">&#9654;</span>
@@ -1692,7 +1693,37 @@
         </tr>
         <tr>
           
-        </tr>
+          <div class="container" id="local">
+            <h2>LOCAL STORAGE</h2>
+            <table>
+              <thead>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Notes</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="code">save item</span></td>
+                  <td>localStorage.setItem("key", value);</td>
+                  <td>localStorage.setItem("data", JSON.stringify(myTaskArr));</td>
+                </tr>
+                <tr>
+                  <td><span class="code">get item</span></td>
+                  <td>localStorage.getItem("key");</td>
+                  <td>const getTaskArrObj = JSON.parse(localStorage.getItem("data"));</td>
+                </tr> 
+                <tr>
+                  <td><span class="code">delete item</span></td>
+                  <td>localStorage.removeItem("key");</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><span class="code">delete all</span></td>
+                  <td>localStorage.clear();</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 </div>
       <!--end-->
     </div>
