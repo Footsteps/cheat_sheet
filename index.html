@@ -34,6 +34,7 @@
         <li><a href="#devtools">DEVTOOLS</a></li>
         <li><a href="#sql">SQL</a></li>
         <li><a href="#form">FORMS</a></li>
+        <li><a href="#regex">REGEX</a></li>
         <li><a href="#local">LOCAL STORAGE</a></li>
       </ol>
     </div>
@@ -1203,6 +1204,11 @@
         </ul></td>
       </tr>
       <tr>
+        <td><span class="code">ternary operator</span></td>
+        <td>example changing textContent of a paragraph</td>
+        <td>el.textContent = condition ? "Use this text if the condition is true" : "Use this text if the condition is false";</td>
+      </tr>
+      <tr>
         <td><span class="code">parseInt()</span></td>
         <td><li>parseInt("2.2") // 2</li>
         <li>parseInt("e") // NaN</li>
@@ -1352,6 +1358,11 @@
         <td><span class="code">freeze</span></td>
         <td>Object.freeze(myObject);</td>
         <td>no changes possible anymore</td>
+      </tr>
+      <tr>
+        <td><span class="code">code example</span></td>
+        <td></td>
+        <td>https://github.com/Footsteps/object_methods_cards</td>
       </tr>
     </tbody>
   </table>
@@ -1610,6 +1621,11 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="code">form validation code example</span></td>
+        <td></td>
+        <td>https://github.com/Footsteps/form_validation_calorie_counter</td>
+      </tr>
+      <tr>
         <td><span class="code">HTML Notes</span></td>
         <td>
           <li>min="0"</li>
@@ -1649,37 +1665,6 @@
           <li>turn array like element (like a node list) into an array</li>
         </td>
       </tr>
-      <tr>
-        <td><span class="code">Regex</span></td>
-        <td>
-          <li>short for</li>
-          <li>used for</li>
-          <li>const regex = /hello/;</li>
-          <li>const regex = /[+-s]/;</li>
-          <li>shorthand character classes: [+], [-], [\s]</li>
-          <li>g flag, i flag</li>
-          <li>+ modifier</li>
-          <li>.replace</li>
-          <li>\d</li>
-          <li>.match(regexargument)</li>
-          <li>alert match</li>
-          <li>str.replace(/[^A-Za-z0-9]/gi, "")</li>
-        </td>
-        <td>
-          <li>regular expressions</li>
-          <li>To match specific characters in a string</li>
-          <li>indicated by a pattern wrapped in forward slashes --> will be an exact match for "hello"</li>
-          <li>match for + and - --> + needs to be escaped with \</li>
-          <li>[] turns it into character classes, not the exact expression I am looking for --> s is whitespace</li>
-          <li>/[+-\s]/g --> the g flag stands for global and tells regex to continue looking for the pattern after it has found a match. I: insensitive</li>
-          <li>match a pattern that occurs one or more times. For example: [0-9]+</li>
-          <li>str.replace(/[+-\s]/, "") --> replaces plus, minus and whitespaces with an empty string </li>
-          <li>shorthand character class to match any digit: \d. example: const regex = /\d+e\d+/i;</li>
-          <li>returns array of match results – containing either the first match, or all matches if the global flag is used. or null if nothing is found</li>
-          <li>if(match) {alert(`Invalid Input: ${invalidInputMatch[0]}` return null;)}</li>
-          <li>remove spaces and non alphanumerical characters of the whole string, caseinsensitive</li>
-          </td>
-        </tr>
         <tr>
           <td><span class="code">toggle</span></td>
           <td>taskForm.classList.toggle("hidden");</td>
@@ -1698,8 +1683,99 @@
           <li>dialogElement.close();</li></td>
           <td>click handler on a button & show the modal & close</td>
         </tr>
-        <tr>
-          
+    </tbody>
+  </table>
+</div>
+
+<!--REGEX-->
+          <div class="container" id="regex">
+            <h2>REGULAR EXPRESSIONS</h2>
+            <table>
+              <thead>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Notes</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="code">use</span></td>
+                  <td>/hello/</td>
+                  <td>To match specific characters in a string, indicated by a pattern wrapped in forward slashes. https://github.com/Footsteps/regex</td>
+                </tr>
+                <tr>
+                  <td> <span class="code">flags</span></td>
+                  <td>/hello/i, /hello/g</td>
+                  <td>i: case insensitive. g: global: tells regex to continue looking for the pattern after it has found a match.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">escape</span></td>
+                  <td>\s</td>
+                  <td>s needs to be escaped</td>
+                </tr>
+                <tr>
+                  <td><span class="code">or</span></td>
+                  <td>/please help|assist me/</td>
+                  <td>looks for please help and assist me</td>
+                </tr>
+                <tr>
+                  <td><span class="code">character class</span></td>
+                  <td>[a-z] oder [0-9]</td>
+                  <td>looks for every character in the alphabet and all numbers from 0-9</td>
+                </tr>
+                <tr>
+                  <td><span class="code">+ quantifier</span></td>
+                  <td>[0-9]+</td>
+                  <td>match more than one number, but consecutive numbers --> 10</td>
+                </tr>
+                <tr>
+                  <td><span class="code">? quantifier</span></td>
+                  <td>/colou?r/</td>
+                  <td>optional character: matches zero or one occurence of the preceding character or group. example: /colou?r/ matches both color and colour</td>
+                </tr>
+                <tr>
+                  <td><span class="code">white spaces</span></td>
+                  <td>\s* or \s+</td>
+                  <td>look for white spaces. * means: match the previous character 0 or more times. + means at least one time</td>
+                </tr>
+                <tr>
+                  <td><span class="code">capture group</span></td>
+                  <td>(hundred|thousand|million|billion) or (?:hundred|thousand|million|billion)</td>
+                  <td>saved or non-saved capture group: define a part of the expression that should be captured and saved for later reference. ?: does not save.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">long example</span></td>
+                  <td>const moneyRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+€/i;</td>
+                  <td>look for "10million€"</td>
+                </tr>
+                <tr>
+                  <td><span class="code">string method match</span></td>
+                  <td>return textareainputvalue.match(regexToTestValueFor);</td>
+                  <td>useable on strings, returns ["please help"] or null if no match. returns array of match results – containing either the first match, or all matches if the global flag is used. or null if nothing is found </td>
+                </tr>
+                <tr>
+                  <td><span class="code">array method some</span></td>
+                  <td>const arr = ["A", "b", "C"]; <br>
+                    arr.some(letter => letter === letter.toUpperCase());
+                  </td>
+                  <td>returns true if callback returns true for at least one element in the array</td>
+                </tr>
+                <tr>
+                  <td><span class="code">regex method test</span></td>
+                  <td>regexToTestValueFor.test(textareainputvalue);</td>
+                  <td>returns a boolean, useable on regexs</td>
+                </tr>
+                <tr>
+                  <td><span class="code">string method replace</span></td>
+                  <td>str.replace(/[^A-Za-z0-9]/gi, "")</td>
+                  <td>emove spaces and non alphanumerical characters of the whole string, caseinsensitive, with an empty string</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+  
+  
+  <!--LOCAL STORAGE-->        
           <div class="container" id="local">
             <h2>LOCAL STORAGE</h2>
             <table>
@@ -1709,6 +1785,11 @@
                 <th>Notes</th>
               </thead>
               <tbody>
+                <tr>
+                  <td><span class="code">code example</span></td>
+                  <td></td>
+                  <td>https://github.com/Footsteps/Local_Storage_toDoApp</td>
+                </tr>
                 <tr>
                   <td><span class="code">save item</span></td>
                   <td>localStorage.setItem("key", value);</td>
