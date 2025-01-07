@@ -1735,12 +1735,17 @@
                 <tr>
                   <td><span class="code">white spaces</span></td>
                   <td>\s* or \s+</td>
-                  <td>look for white spaces. * means: match the previous character 0 or more times. + means at least one time</td>
+                  <td>look for white spaces, tabs and line breaks. * means: match the previous character 0 or more times. + means at least one time</td>
                 </tr>
                 <tr>
                   <td><span class="code">capture group</span></td>
                   <td>(hundred|thousand|million|billion) or (?:hundred|thousand|million|billion)</td>
                   <td>saved or non-saved capture group: define a part of the expression that should be captured and saved for later reference. ?: does not save.</td>
+                </tr>
+                <tr>
+                  <td><span class="code">character classes & whole word</span></td>
+                  <td>(?:\s|^)word(?:\s|$)</td>
+                  <td>const stockRegex = /(?:\s|^)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:\s|$)/i;</td>
                 </tr>
                 <tr>
                   <td><span class="code">long example</span></td>
