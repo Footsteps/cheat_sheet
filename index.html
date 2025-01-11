@@ -1291,7 +1291,7 @@
 <tr>
   <td class="code">map</td>
   <td>numbers.map((number) => number * 2)</td>
-  <td>returns results array. 2nd argument: callback</td>
+  <td>returns NEW array. 2nd argument: callback</td>
 </tr>
 <tr>
   <td class="code">forEach</td>
@@ -1340,6 +1340,12 @@
   <td>const removedFruits = fruits.splice(1, 2);</td>
   <td>modifies the array: remove, replace or add element at a specific index and returns removed element. 3 Arguments: 1: index, 2: number of items to remove, 3: optional: replacement element</td>
 </tr>
+<tr>
+  <td><span class="code">split()</span></td>
+  <td>.split(",") <br>
+    .split(/,\s*/g);</td>
+  <td>takes a string and splits it into an array of strings. separator as a string can be passed. like this or as a regex</td>
+  </tr>
 </tbody>
 </table>
 </div>
@@ -1637,6 +1643,7 @@
           <li>insertAdjacentHtml("position", "HTMLString")</li>
           <li>input.value = "";</li>
           <li>container.innerHTML = "";</li>
+          <li>const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);</li>
         </td>
         <td>
           <li>in input element type number: allows only positive numbers</li>
@@ -1648,6 +1655,7 @@
           <li>adds html while preserving recently added html. container.insertAdjacentHTML("beforeend", HTMLString);</li>
           <li>clear an input field</li>
           <li>clear a lot of input fields that have been selected & converted into an array (for (const container in inputFieldContainers))</li>
+          <li>get the values of a select (spread operator converts the html collection into an array. map gets all the values</li>
         </td>
       </tr>
       <tr>
