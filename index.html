@@ -1284,6 +1284,10 @@
     </thead>
     <tbody>
 <tr>
+  <td><span class="code">code</span></td>
+  <td></td>
+</tr>
+      <tr>
   <td class="code">spread operator</td>
   <td>[...arr1, ...arr2]</td>
   <td>copy or concatenate arrays: const combinedArr = [...arr1, ...arr2]</td>
@@ -1301,12 +1305,12 @@
 <tr>
   <td class="code">join</td>
   <td>.join(" ")</td>
-  <td>concatenate all the elements of an array into a single string. optional: separator.</td>
+  <td>concatenate all the elements of an array into a single STRING. optional: separator.</td>
 </tr>
 <tr>
   <td class="code">sort</td>
-  <td>names.sort(() => Math.random() - 0.5);</td>
-  <td>returns strings sorted by UTF-16 encoding. look up call back part</td>
+  <td>names.sort((a, b) => a-b);</td>
+  <td>returns strings sorted alphabetically. Problem: numbers --> 10 is sorted before 2. So: pass 2 arguments, representing the 2 values being compared. function a-b returns a value < 0 if b is greater, meaning that it should come after a.</td>
 </tr>
 <tr>
   <td class="code">find</td>
@@ -1321,7 +1325,7 @@
 <tr>
   <td class="code">filter</td>
   <td>userData?.songs.filter((song) => song.id === id);</td>
-  <td>? prevents errors</td>
+  <td>callback returns a boolean. only the truthy ones get added to the new array</td>
 </tr>
 <tr>
   <td class="code">object: optional chaining</td>
@@ -1345,6 +1349,13 @@
   <td>.split(",") <br>
     .split(/,\s*/g);</td>
   <td>takes a string and splits it into an array of strings. separator as a string can be passed. like this or as a regex</td>
+  </tr>
+  <tr>
+    <td><span class="code">reduce</span></td>
+    <td></td>
+    <td>takes an array and applies a callback function to condense the array into a single value.
+      takes a callback, which takes at least 2 parameters: accumulator & array. The return value for the callback becomes the value of the accumulator on the next iteration.
+    </td>
   </tr>
 </tbody>
 </table>
